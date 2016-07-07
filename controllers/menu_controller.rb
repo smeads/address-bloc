@@ -68,10 +68,10 @@ require_relative '../models/address_book'
 
    def view_entry_number
      print "Entry number to view: "
-     selection = gets.chomp.to_i
+     selection = gets.chomp.to_i - 1
 
-     if selection < @address_boook.entries.count
-       puts @address_book.entries(selection)
+     if selection < address_book.entries.count
+       puts address_book.entries[selection]
        puts "Press enter to return to main menu"
        gets.chomp
        system "clear"
