@@ -15,7 +15,8 @@ require_relative '../models/address_book'
      puts "3 - Create an entry"
      puts "4 - Search for an entry"
      puts "5 - Import entries from a CSV"
-     puts "6 - Exit"
+     puts "6 - Detonate"
+     puts "7 - Exit"
      print "Enter your selection: "
 
 
@@ -43,6 +44,11 @@ require_relative '../models/address_book'
        read_csv
        main_menu
      when 6
+       system "clear"
+       @address_book.detonate
+       puts "All entries detonated!"
+       main_menu
+     when 7
        puts "Good-bye!"
 
        exit(0)
